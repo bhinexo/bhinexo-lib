@@ -11,6 +11,6 @@ Run yarn test to execute the test suite.
 Install this in another project via `yarn add @bhinexo/lib`
 
 Then import the contracts via:
-```json
+```js
 import '@bhinexo/lib/contracts/libraries/Babylonian.sol';
 ```
