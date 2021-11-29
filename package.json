@@ -1,0 +1,43 @@
+{
+  "name": "@bhinexo/lib",
+  "version": "1.0.0",
+  "description": "Solidity libraries for the Bhinexo Protocol contracts",
+  "files": [
+    "contracts",
+    "!contracts/test"
+  ],
+  "homepage": "https://bhinexo.com",
+  "repository": {
+    "url": "https://github.com/bhinexo/bhinexo-lib.git",
+    "type": "git"
+  },
+  "bugs": {
+    "url": "https://github.com/bhinexo/bhinexo-lib/issues"
+  },
+  "engines": {
+    "node": ">=10"
+  },
+  "scripts": {
+    "lint": "prettier ./test/*.ts --check",
+    "precompile": "rimraf ./build/",
+    "compile": "waffle",
+    "pretest": "yarn compile",
+    "test": "mocha",
+    "prepublishOnly": "yarn test"
+  },
+  "devDependencies": {
+    "@types/chai": "^4.2.22",
+    "@types/mocha": "^9.0.0",
+    "chai": "^4.3.4",
+    "ethereum-waffle": "^3.4.0",
+    "mocha": "^9.1.3",
+    "prettier": "^2.5.0",
+    "prettier-plugin-solidity": "^1.0.0-beta.19",
+    "rimraf": "^3.0.2",
+    "solc": "^0.6.0",
+    "solhint-plugin-prettier": "^0.0.5",
+    "ts-node": "^10.4.0",
+    "typescript": "^4.5.2"
+  },
+  "license": "GPL-3.0-or-later"
+}
